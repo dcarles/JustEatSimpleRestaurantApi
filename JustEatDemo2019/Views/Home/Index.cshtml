@@ -1,0 +1,40 @@
+﻿@model  JustEatDemo2019.Models.SearchViewModel
+@{
+    ViewBag.Title = "Order takeaway online";
+}
+
+<div class="main">
+
+    <h2>Order takeaway online</h2>
+
+
+    <form action="/Home/Index" method="post">
+        <div class='col-md-2 col-xs-12 col-md-offset-5'>
+            <div class="form-group">
+                <div class='input-group date'>
+                    @Html.TextBoxFor(m => m.Outcode, new { @Class = "form-control", Placeholder = "Enter Outcode" })
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-map-marker"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class='col-md-5 col-xs-12'>
+            <input class="btn btn-warning pull-left" type="submit" id="btnSearch" value="Find takeaways" onclick="cacheOutcode();">
+        </div>
+        @Html.ValidationMessageFor(m => m.Outcode)
+    </form>
+
+</div>
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            document.getElementById("Outcode").value = localStorage.getItem("outcode");
+        });
+
+        function cacheOutcode() {
+            localStorage.setItem('outcode', $('#Outcode').val());
+        }
+
+    </script>
+}

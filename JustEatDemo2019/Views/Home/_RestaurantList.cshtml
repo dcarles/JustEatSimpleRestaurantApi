@@ -1,0 +1,24 @@
+﻿@model List<JustEatDemo2019.Models.RestaurantViewModel>
+
+
+@foreach (var restaurant in Model)
+{
+    <div class="row restaurant">
+        <div class="col-md-2 col-md-offset-3">
+            <img src="@restaurant.Logo" />
+        </div>
+        <div class="col-md-5">
+            <h5 class="name">@restaurant.Name</h5>
+            <p class="rating">
+                @{
+                    var ratingStarName = restaurant.DisplayRating.ToString().Replace(".", "").Trim('0');
+                }
+                <img width="102" height="17" src="/images/stars-@(ratingStarName).png" alt="@restaurant.DisplayRating stars out of 6">
+                <span class="numberOfRatings">(@restaurant.NumberOfRatings)</span>
+            </p>
+            <span class="cuisine"><i>@restaurant.CuisineTypes</i></span>
+            <br />
+            <span class="address">@restaurant.Address</span>
+        </div>
+    </div>
+}

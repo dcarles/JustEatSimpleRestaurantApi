@@ -1,0 +1,157 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: #000;
+    background-color: #eee
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.header {
+    min-height: 50px;
+    background-color: #ce0b10;
+    border: none;
+}
+
+.body-content {
+    padding-top: 60px;
+}
+
+.main {
+    position: relative;
+    background-color: #ce0b10;
+    color: #fff;
+    text-align: center;
+    min-height: 593px;
+    overflow: hidden;
+}
+
+.glyphicon-map-marker {
+    color: #ce0b10;
+}
+
+.restaurants .openRestaurants, .restaurants .closedRestaurants, .restaurants .heading {
+    display: block;
+    margin: 0 10px 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 0 #c9c9c9;
+    -ms-box-shadow: 0 1px 0 #c9c9c9;
+    box-shadow: 0 1px 0 #c9c9c9;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.restaurants .heading {
+    margin-bottom: 0;
+    border-bottom: 1px solid #f0ede8;
+    margin-top: 20px;
+}
+
+    .restaurants .heading h3 {
+        padding: 20px 0 20px 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+.restaurants .openRestaurants .restaurant, .restaurants .closedRestaurants .restaurant {
+    border-bottom: 1px solid #f0ede8;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+    .restaurants .openRestaurants .restaurant .name, .restaurants .closedRestaurants .restaurant .name {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+.restaurant .rating {
+    font-size: 1.2em;
+    margin-bottom: 6px;
+    overflow: hidden;
+}
+
+.restaurant .address, .restaurant .cuisine {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 6px;
+}
+
+/*404 */
+.message-box {
+    padding-left: 50px;
+}
+.tryToMessage {
+  color: #000;
+    float: left;
+  display: block;
+  font-family: 'Istok Web',sans-serif;
+  font-size: 18px;
+  margin: 0 0 0 0;
+}
+
+.tryToMessage ul {
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    text-align: left;
+}
+
+.tryToMessage ul li {
+    display: block;
+    margin: 0 0 0 10px;
+    padding: 4px 0 4px 10px;
+}
+
+
+.tryToMessage a {
+	color:#41444b ;
+    text-decoration: underline;
+}
+.tryToMessage a:hover {
+	color:#000;
+}
+
+.tryToMessage span {
+    font-size: 18px;
+    color: #a19b81;
+    font-weight: bold;
+}
+
+.message {
+  display: block;
+  font-family: proxima nova light,sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  margin: 30px 0 10px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.message p {
+    font-family: proxima nova light, sans-serif;
+    padding: 10px;
+}
+
+.yoda {
+    float: left;
+}
+
+/*END OF 404 */
+

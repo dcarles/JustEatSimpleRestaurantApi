@@ -1,0 +1,28 @@
+﻿@model  JustEatDemo2019.Models.RestaurantsResultViewModel
+
+@{
+    ViewBag.Title = "Takeaway Restaurants in " + Model.Outcode;
+    var openRestaurants = Model.Restaurants.Where(r => r.IsOpenNow).ToList();
+    var closedRestaurants = Model.Restaurants.Where(r => !r.IsOpenNow).ToList();
+}
+
+<div class="container restaurants">
+    
+    <div class="row heading">
+        <div class="col-md-9 col-md-offset-3">
+            <h3>@openRestaurants.Count takeaway restaurants in @Model.Outcode.ToUpper() @Html.ActionLink("change location", "Index", "Home")</h3>
+        </div>
+    </div>
+    <div class="openRestaurants">
+        @Html.Partial("_RestaurantList", openRestaurants)
+    </div>
+
+    <div class="row heading">
+        <div class="col-md-9 col-md-offset-3">
+            <h3>@closedRestaurants.Count takeaways opening later</h3>
+        </div>
+    </div>
+    <div class="closedRestaurants">
+        @Html.Partial("_RestaurantList", closedRestaurants)
+    </div>
+</div>
